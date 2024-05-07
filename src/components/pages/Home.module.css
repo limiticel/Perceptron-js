@@ -1,0 +1,102 @@
+/* home.css */
+
+/* Estilos para o título */
+h1 {
+    color: #333; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-top: 20px;
+    margin: 20px; /* Espaçamento superior */
+    text-align: center; /* Centralizar o texto */
+  }
+
+
+.boxContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem{
+  margin: 20px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px gray;
+  height: 300px;
+  width: 250px;
+  transition: 0.5s;
+ 
+}
+
+.listItem:hover{
+  transform: scale(1.2);
+  border-image: fill 0 linear-gradient(#0003,#000);
+  cursor: pointer;
+
+ 
+}
+
+
+.listItem:hover .cardText{
+  display: block;
+ 
+}
+
+
+.cardText{
+  display: flex;
+   display: none;
+   padding: 11px;
+   color: white;
+   font-size: 20px;
+   align-items: center;
+   justify-content: center;
+   text-align: justify;
+   text-justify: auto;
+   margin-top: 30%;
+   font-weight: bold ;
+   text-shadow: 
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+    transition: 1s;
+
+}
+.ul_item{
+  display: flex;
+  justify-content: center;
+}
+.fcdBtn {
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  justify-content: center;
+  width: max-content;
+  background-color: none;
+  overflow: hidden; /* Garante que o overflow seja oculto para a animação */
+  position: relative; /* Define a posição relativa para o pseudo-elemento */
+  cursor: pointer;
+}
+.fcdBtn:hover{
+  color: white;
+}
+.fcdBtn::before {
+  content: ''; /* Adiciona um pseudo-elemento */
+  position: absolute; /* Define a posição absoluta para o pseudo-elemento */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0); /* Cor do preenchimento */
+  transition: width 0.3s ease; /* Transição de largura com suavização */
+  z-index: -1;
+}
+
+.fcdBtn:hover::before {
+ 
+  width: 100%; /* Define a largura total ao passar o mouse */
+
+}
